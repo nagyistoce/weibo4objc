@@ -12,7 +12,9 @@
 @protected
 	NSString *key;
 	NSString *secret;
+    NSString *verifier;
 }
+@property(retain) NSString *verifier;
 @property(retain) NSString *key;
 @property(retain) NSString *secret;
 

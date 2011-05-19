@@ -11,6 +11,7 @@
 #import "OAToken.h"
 #import "OASignatureProviding.h"
 #import "HttpMethod.h"
+#import "Constants.h"
 
 @interface OauthSingnature : NSObject {
 @protected
@@ -49,6 +50,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
         timestamp:(NSString *)aTimestamp;
 
 - (NSString *)getSingnatureString;
+- (NSString *)getQueryString ;
 - (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue;
 
 @end

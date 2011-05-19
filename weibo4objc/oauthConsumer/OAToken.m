@@ -11,7 +11,7 @@
 
 @implementation OAToken
 
-@synthesize key, secret;
+@synthesize key, secret, verifier;
 
 #pragma mark init
 
@@ -21,6 +21,7 @@
 	{
 		self.key = @"";
 		self.secret = @"";
+        self.verifier = @"";
 	}
     return self;
 }
@@ -71,6 +72,7 @@
 {
 	[key release];
 	[secret release];
+    [verifier release];
 	[super dealloc];
 }
 

@@ -13,6 +13,8 @@
 #import "StringPart.h"
 #import "FilePart.h"
 
+extern NSString * callbackURL;
+
 @interface Weibo (Private) 
 
 - (NSString *) generateParameterString:(NSDictionary *) parameters;
@@ -74,22 +76,22 @@ NSString * error = @"error_code";
 }
 
 - (Status *)statusUpdate:(NSString *) status inReplyToStatusId:(weiboId) replyToId latitude:(double) lat longitude:(double) longitude{
-	if(status == nil){
+    if(status == nil){
 		InvalidParameterException * exception = [InvalidParameterException 
 												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
 		@throw exception;
 	}
-	NSMutableString * urlString = [[NSMutableString alloc] init];
+    NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
-	[urlString appendFormat:@"statuses/update.json?source=%@",_consumerKey];
+	[urlString appendFormat:@"statuses/update.json"];
 	NSMutableDictionary * mbody = [[NSMutableDictionary alloc] init];
 	[mbody setObject:status forKey:@"status"];
 	if(replyToId!=nilReplyId)
-	[self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[NSString stringWithFormat:@"%llu",replyToId]];
+        [self generateBodyDic:mbody paraKey:@"in_reply_to_status_id" paraValue:[NSString stringWithFormat:@"%llu",replyToId]];
 	if(lat != nilLatitude)
-	[self generateBodyDic:mbody paraKey:@"lat" paraValue:[NSString stringWithFormat:@"%f",lat] ];
+        [self generateBodyDic:mbody paraKey:@"lat" paraValue:[NSString stringWithFormat:@"%f",lat] ];
 	if(longitude != nilLongitude)
-	[self generateBodyDic:mbody paraKey:@"long" paraValue:[NSString stringWithFormat:@"%f",longitude] ];
+        [self generateBodyDic:mbody paraKey:@"long" paraValue:[NSString stringWithFormat:@"%f",longitude] ];
 	NSString * resultString = [self retrieveData:urlString callMethod: POST body:mbody];
 	NSRange range = [resultString rangeOfString:error];
 	if(range.location == NSNotFound){
@@ -169,13 +171,11 @@ NSString * error = @"error_code";
 - (NSArray *)getFriendsTimeline:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) currentPage{
 	NSMutableString * urlString = [[NSMutableString alloc] init];
 	[urlString appendString:baseUrl];
-	[urlString appendFormat:@"statuses/friends_timeline.json?source=%@",_consumerKey];
-	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithLongLong:sinceId],@"since_id",[NSNumber numberWithInt:maxid],@"max_id",[NSNumber numberWithInt:maxCount],@"count",
-							  [NSNumber numberWithInt:currentPage],@"page",nil];
-	NSString * paraString = [self generateParameterString:paraDic];
-	[urlString appendFormat:@"%@",paraString];
-	[paraString release];
-	NSString * resultString = [self retrieveData:urlString callMethod:GET body:nil];
+	[urlString appendFormat:@"statuses/friends_timeline.json"];
+	NSDictionary * paraDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%lld",sinceId],@"since_id",[NSString stringWithFormat:@"%lld",maxid],@"max_id",[NSString stringWithFormat:@"%d",maxCount],@"count",[NSString stringWithFormat:@"%d",currentPage],@"page",nil];
+    NSString * paraString = [self generateParameterString:paraDic];
+    [urlString appendString:paraString];
+    NSString * resultString = [self retrieveData:urlString callMethod:GET body:paraDic];
 	NSArray * result = [JsonStatusParser parseToStatuses:resultString];
 	[urlString release];
 	[result autorelease];
@@ -314,16 +314,16 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 }
 
 - (NSString *) retrieveData:(NSString *) urlString callMethod:(methodEnum ) methodE body:(NSDictionary *) httpbody{
-	NSURL * url = [[NSURL alloc] initWithString:urlString];
+    NSURL * url = [[NSURL alloc] initWithString:urlString];
 	HttpMethod * method = [[HttpMethod alloc] initWithMethod:methodE];
 	[method setUrl:url];
-	NSDictionary * headers = [self setAuth];
+	NSDictionary * headers = [self setAuthWithURL:urlString HttpMethod:methodE Parameters:httpbody];
 	[method setHeaderFields:headers];
 	[method setBody:httpbody]; 
 	HttpResponse * response =[client executeMethod:method];
 	[url release];
 	[method release];
-	return [response responseString];
+	return [response responseString]; 
 }
 
 
@@ -464,6 +464,171 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	[tmpString release];
 	return headers;
 }
+
+- (NSDictionary *) setAuthWithURL:(NSString *) urlString HttpMethod:(methodEnum) methodE  Parameters:(NSMutableDictionary *) parameters{
+    
+    
+    _accessToken = [[OAToken alloc] init];
+    
+    _accessToken.key = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessTokenKey"];
+    _accessToken.secret = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessTokenSecret"];
+    _accessToken.verifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessTokenVerifier"];
+    
+    OAConsumer *consumer = [[OAConsumer alloc] initWithKey:_consumerKey
+													secret:_consumerSecret];
+    
+    OauthSingnature *request = [[OauthSingnature alloc] initWithURL:urlString
+                                                           consumer:consumer
+                                                              token:_accessToken
+                                                              realm:nil
+                                                  signatureProvider:nil];
+        
+    NSArray * values = [parameters allValues];
+    NSArray * keys = [parameters allKeys];
+    NSMutableArray * parameter = [[NSMutableArray alloc] init];
+    for (int i=0; i < [values count]; i++) {
+        OARequestParameter * requestParameter = [OARequestParameter requestParameterWithName:[keys objectAtIndex:i] value:[values objectAtIndex:i]];
+        [parameter addObject:requestParameter];
+    }
+    
+    [request setParameters:parameter];
+	[request setMethod:methodE];
+    [request setUrlStringWithoutQuery:[[urlString componentsSeparatedByString:@"?"] objectAtIndex:0]];
+    
+    NSString *authString = [request getSingnatureString];
+    
+    NSDictionary * headers = [NSDictionary dictionaryWithObjectsAndKeys:authString,@"Authorization",nil];
+    
+    return headers;
+    
+}
+
+
+- (BOOL)requestRequestToken{
+	NSMutableString * urlString = [[NSMutableString alloc] init];
+	[urlString appendString:baseUrl];
+	[urlString appendFormat:@"oauth/request_token"];    
+    OAConsumer *consumer = [[OAConsumer alloc] initWithKey:_consumerKey
+													secret:_consumerSecret];
+	OauthSingnature *request = [[OauthSingnature alloc] initWithURL:urlString
+                                                           consumer:consumer
+                                                              token:nil
+                                                              realm:nil
+                                                  signatureProvider:nil];
+	[request setMethod:POST];
+    NSString * headerString = [request getSingnatureString];
+    
+    //Set Header
+    NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithObject:headerString forKey:@"Authorization"];
+    
+    NSString * queryString = [request getQueryString];
+     [urlString appendFormat:@"?%@",queryString];
+     NSLog(@"urlString:%@",urlString);
+     
+    
+    NSURL * url = [[NSURL alloc] initWithString:urlString];
+    
+    HttpMethod * method = [[HttpMethod alloc] initWithMethod:POST];
+    [method setUrl:url];
+	[method setHeaderFields:headers];
+    
+    //Post Request
+	HttpResponse * response =[client executeMethod:method];
+	[url release];
+	[method release];
+    
+    NSString *responseBody = [[NSString alloc] initWithData:[response responseData]
+                                                   encoding:NSUTF8StringEncoding];
+    _accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+    
+    
+    if (_accessToken.secret != nil) {
+        return YES;
+    }
+    return NO;
+}
+
+- (NSString *) askUserForAuthorization{
+    
+    NSString *address = [NSString stringWithFormat:
+                         @"http://api.t.sina.com.cn/oauth/authorize?oauth_token=%@",
+                         _accessToken.key];
+    
+    
+    //You Also Can Use a WebView Here
+    NSURL * url = [NSURL URLWithString:address];
+    [[UIApplication sharedApplication] openURL:url];
+    
+    /*  
+        
+        //1.Set a URL Type in Your App Info, Then Set Callback URL To Your URL Schemes:
+            callbackURL = @"yourSchemes://";
+        
+     
+        //2.Use Following Method To Get Callback:
+            for UIKit:
+                - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url;
+            for AppKit:
+                - (void)handleURLEvent:(NSAppleEventDescriptor*)event withReplyEvent:(NSAppleEventDescriptor*)replyEvent;
+                
+     
+        //3.Save Your Verifier Like This:
+          [[NSUserDefaults standardUserDefaults] setObject:(NSString *)pin forKey:@"accessTokenVerifier"];
+     
+     
+        //4.If You Done Saving , Performance:
+          [self requestAccessToken];
+     
+    */
+
+}
+
+- (NSString *)requestAccessToken{
+    
+    NSMutableString * urlString = [[NSMutableString alloc] init];
+	[urlString appendString:baseUrl];
+	[urlString appendFormat:@"oauth/access_token"];    
+    NSURL * url = [[NSURL alloc] initWithString:urlString];
+	HttpMethod * method = [[HttpMethod alloc] initWithMethod:POST];
+	[method setUrl:url];
+    
+    OAConsumer *consumer = [[OAConsumer alloc] initWithKey:_consumerKey
+													secret:_consumerSecret];
+    
+    _accessToken.verifier = [[NSUserDefaults standardUserDefaults] stringForKey:@"accessTokenVerifier"];
+    	
+	OauthSingnature *request = [[OauthSingnature alloc] initWithURL:urlString
+                                                           consumer:consumer
+                                                              token:_accessToken
+                                                              realm:nil
+                                                  signatureProvider:nil];
+	
+	[request setMethod:POST];
+    
+    NSString * headerString = [request getSingnatureString];
+    
+    NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithObject:headerString forKey:@"Authorization"];
+    
+	[method setHeaderFields:headers];
+    
+	HttpResponse * response =[client executeMethod:method];
+	[url release];
+	[method release];
+    
+    NSString *responseBody = [[NSString alloc] initWithData:[response responseData]
+                                                   encoding:NSUTF8StringEncoding];
+    
+    _accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:_accessToken.key forKey:@"accessTokenKey"];
+    [[NSUserDefaults standardUserDefaults] setObject:_accessToken.secret forKey:@"accessTokenSecret"];
+    
+    //start using.
+    
+    return [response responseString];
+    
+}
+
 
 - (NSString *) generateParameterString:(NSDictionary *) parameters{
 	NSMutableString * result = [[NSMutableString alloc] init];

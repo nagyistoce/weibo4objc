@@ -11,6 +11,8 @@
 #import "NSString+URLEncoding.h"
 #import "OAHMAC_SHA1SignatureProvider.h"
 
+extern NSString * callbackURL;
+
 @interface OauthSingnature (Private)
 - (void)_generateTimestamp;
 - (void)_generateNonce;
@@ -123,13 +125,15 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
                                                   [token.secret URLEncodedString]]];
 	// set OAuth headers
     NSString *oauthToken;
+    
     if ([token.key isEqualToString:@""])
-        oauthToken = @""; // not used on Request Token transactions
-    else
-        oauthToken = [NSString stringWithFormat:@"oauth_token=\"%@\", ", [token.key URLEncodedString]];
-	
+		oauthToken = [NSString stringWithFormat:@"oauth_callback=\"%@\", ",[callbackURL URLEncodedString]];
+	else if(token.verifier == nil || [token.verifier isEqualToString:@""])
+		oauthToken = [NSString stringWithFormat:@"oauth_token=\"%@\", ", [token.key URLEncodedString]];
+	else
+		oauthToken = [NSString stringWithFormat:@"oauth_token=\"%@\", oauth_verifier=\"%@\", ", [token.key URLEncodedString], [token.verifier URLEncodedString]];
+    
 	NSMutableString *extraParameters = [NSMutableString string];
-	
 	// Adding the optional parameters in sorted order isn't required by the OAuth spec, but it makes it possible to hard-code expected values in the unit tests.
 	for(NSString *parameterName in [[extraOAuthParameters allKeys] sortedArrayUsingSelector:@selector(compare:)])
 	{
@@ -137,7 +141,6 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 		 [parameterName URLEncodedString],
 		 [[extraOAuthParameters objectForKey:parameterName] URLEncodedString]];
 	}	
-
     NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", %@oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"%@",
                              [realm URLEncodedString],
                              [consumer.key URLEncodedString],
@@ -149,6 +152,25 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 							 extraParameters];
 	return oauthHeader;
 }
+
+- (NSString *)getQueryString 
+{
+    signature = [signatureProvider signClearText:[self _signatureBaseString]
+                                      withSecret:[NSString stringWithFormat:@"%@&%@",
+												  [consumer.secret URLEncodedString],
+                                                  [token.secret URLEncodedString]]];
+    NSString *callback= [NSString stringWithFormat:@"oauth_callback=\"%@\", ",[callbackURL URLEncodedString]];
+    
+    NSString *queryString = [NSString stringWithFormat:@"oauth_consumer_key=%@&%@&oauth_signature_method=%@&oauth_signature=%@&oauth_timestamp=%@&oauth_nonce=%@&oauth_version=1.0",
+                             [consumer.key URLEncodedString],
+                             callback,
+                             [[signatureProvider name] URLEncodedString],
+                             [signature URLEncodedString],
+                             timestamp,
+                             nonce];
+	return queryString;
+}
+
 
 - (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue
 {
@@ -191,8 +213,12 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
     
     if (![token.key isEqualToString:@""]) {
         [parameterPairs addObject:[[OARequestParameter requestParameterWithName:@"oauth_token" value:token.key] URLEncodedNameValuePair]];
+		if (token.verifier != nil && ![token.verifier isEqualToString:@""]) {
+			[parameterPairs addObject:[[OARequestParameter requestParameterWithName:@"oauth_verifier" value:token.verifier] URLEncodedNameValuePair]];
+		}
     }
-
+	else [parameterPairs addObject:[[OARequestParameter requestParameterWithName:@"oauth_callback" value:callbackURL] URLEncodedNameValuePair]];
+    
     for (OARequestParameter *param in parameters) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
@@ -207,7 +233,6 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 					 httpMethod,
 					 [urlStringWithoutQuery URLEncodedString],
 					 [normalizedRequestParameters URLEncodedString]];
-	
 	return ret;
 }
 
