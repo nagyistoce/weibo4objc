@@ -56,6 +56,11 @@ static const weiboId nilReplyId = 0;
 - (void)setAPIDomain:(NSString *)domain;
 - (BOOL)usesSecureConnection; // YES = uses HTTPS, default is YES
 
+- (BOOL)requestRequestToken;
+- (NSString *) askUserForAuthorization;
+- (NSString *)requestAccessToken;
+
+
 // Utility methods
 - (NSString *)getImageAtURL:(NSString *)urlString;
 

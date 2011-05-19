@@ -516,21 +516,13 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
                                                               realm:nil
                                                   signatureProvider:nil];
 	[request setMethod:POST];
-    NSString * headerString = [request getSingnatureString];
-    
-    //Set Header
-    NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithObject:headerString forKey:@"Authorization"];
-    
+
     NSString * queryString = [request getQueryString];
-     [urlString appendFormat:@"?%@",queryString];
-     NSLog(@"urlString:%@",urlString);
-     
-    
+    [urlString appendFormat:@"?%@",queryString];    
     NSURL * url = [[NSURL alloc] initWithString:urlString];
     
     HttpMethod * method = [[HttpMethod alloc] initWithMethod:POST];
     [method setUrl:url];
-	[method setHeaderFields:headers];
     
     //Post Request
 	HttpResponse * response =[client executeMethod:method];
@@ -540,8 +532,6 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
     NSString *responseBody = [[NSString alloc] initWithData:[response responseData]
                                                    encoding:NSUTF8StringEncoding];
     _accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
-    
-    
     if (_accessToken.secret != nil) {
         return YES;
     }
