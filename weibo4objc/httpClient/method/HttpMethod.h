@@ -37,6 +37,8 @@ typedef enum methodEnum {
 @property (readwrite,retain) NSURL * url;
 @property (readwrite,assign) Auth auth;
 
+-(void) setHeaderFieldsWithDictionary:(NSDictionary *)headerField;
+-(void) setBodyWithDictionary:(NSDictionary *)aBody;
 -(HttpResponse *) execute;
 -(void) addPart:(PartBase *) part;
 

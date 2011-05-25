@@ -20,6 +20,16 @@
 @synthesize url;
 @synthesize auth;
 
+-(void) setHeaderFieldsWithDictionary:(NSDictionary *)headerField{
+    NSMutableDictionary * multableHeaderDic = [NSMutableDictionary dictionaryWithDictionary:headerField];
+    [self setHeaderFields:multableHeaderDic];
+}
+
+-(void) setBodyWithDictionary:(NSDictionary *)aBody{
+    NSMutableDictionary * multableBodyDic = [NSMutableDictionary dictionaryWithDictionary:aBody];
+    [self setBody:multableBodyDic];
+}
+
 - (HttpResponse *) execute{
 	if (delegate !=nil) {
 		BaseMethod * method = (BaseMethod *) delegate;
