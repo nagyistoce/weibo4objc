@@ -8,9 +8,3 @@
 
 #import <Foundation/Foundation.h>
 
-
-@interface main : NSObject {
-
-}
-
-@end
