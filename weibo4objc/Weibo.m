@@ -12,6 +12,9 @@
 #import "JsonStatusParser.h"
 #import "StringPart.h"
 #import "FilePart.h"
+#import "OAConsumer.h"
+#import "OauthSingnature.h"
+#import "OARequestParameter.h"
 
 extern NSString * callbackURL;
 
@@ -428,7 +431,7 @@ sinceId:(weiboId) sinceId maxId:(weiboId) maxid count:(int) maxCount page:(int) 
 	return result;							
 }
 
-- (Status *)statusRepost:(weiboId) statusId status:(NSString *) status{
+- (Status *)statusRepost:(weiboId) statusId status:(NSString *) status withComment:(int) withComment{
 	if(status == nil||statusId<=0){
 		InvalidParameterException * exception = [InvalidParameterException 
 												 exceptionWithName:@"Invalid Parameter Exception" reason:@"Status should not be nil. " userInfo:nil];
