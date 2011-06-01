@@ -29,23 +29,14 @@
 		C63626DC1384BA0D00689881 /* RandomStringGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626B61384BA0D00689881 /* RandomStringGenerator.h */; };
 		C63626DD1384BA0D00689881 /* RandomStringGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626B71384BA0D00689881 /* RandomStringGenerator.m */; };
 		C63626DE1384BA0D00689881 /* NSString_URLEncodingTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626B91384BA0D00689881 /* NSString_URLEncodingTest.h */; };
-		C63626DF1384BA0D00689881 /* NSString_URLEncodingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BA1384BA0D00689881 /* NSString_URLEncodingTest.m */; };
 		C63626E01384BA0D00689881 /* OAConsumerTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626BB1384BA0D00689881 /* OAConsumerTest.h */; };
-		C63626E11384BA0D00689881 /* OAConsumerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BC1384BA0D00689881 /* OAConsumerTest.m */; };
 		C63626E21384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626BD1384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.h */; };
-		C63626E31384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BE1384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.m */; };
 		C63626E41384BA0D00689881 /* OAPlaintextSignatureProviderTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626BF1384BA0D00689881 /* OAPlaintextSignatureProviderTest.h */; };
-		C63626E51384BA0D00689881 /* OAPlaintextSignatureProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C01384BA0D00689881 /* OAPlaintextSignatureProviderTest.m */; };
 		C63626E61384BA0D00689881 /* OARequestParameterTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626C11384BA0D00689881 /* OARequestParameterTest.h */; };
-		C63626E71384BA0D00689881 /* OARequestParameterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C21384BA0D00689881 /* OARequestParameterTest.m */; };
 		C63626E81384BA0D00689881 /* OATokenTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626C31384BA0D00689881 /* OATokenTest.h */; };
-		C63626E91384BA0D00689881 /* OATokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C41384BA0D00689881 /* OATokenTest.m */; };
 		C63626EA1384BA0D00689881 /* OauthSingnatureTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626C51384BA0D00689881 /* OauthSingnatureTest.h */; };
-		C63626EB1384BA0D00689881 /* OauthSingnatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C61384BA0D00689881 /* OauthSingnatureTest.m */; };
 		C63626EC1384BA0D00689881 /* RandomStringGeneratorTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626C71384BA0D00689881 /* RandomStringGeneratorTest.h */; };
-		C63626ED1384BA0D00689881 /* RandomStringGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C81384BA0D00689881 /* RandomStringGeneratorTest.m */; };
 		C63626EE1384BA0D00689881 /* XauthSignatureTest.h in Headers */ = {isa = PBXBuildFile; fileRef = C63626C91384BA0D00689881 /* XauthSignatureTest.h */; };
-		C63626EF1384BA0D00689881 /* XauthSignatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626CA1384BA0D00689881 /* XauthSignatureTest.m */; };
 		EF18D4A912BEF4ED00382796 /* ServerSideError.h in Headers */ = {isa = PBXBuildFile; fileRef = EF18D4A712BEF4ED00382796 /* ServerSideError.h */; };
 		EF18D4AA12BEF4ED00382796 /* ServerSideError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18D4A812BEF4ED00382796 /* ServerSideError.m */; };
 		EF1A6F4912C32BD500B9B870 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8BAB6F12B623760083DFF2 /* Base64.m */; };
@@ -53,7 +44,6 @@
 		EF1D1D6A12B71F21000D718C /* XmlStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1D6812B71F21000D718C /* XmlStatusParser.m */; };
 		EF1D1D7112B71F6A000D718C /* JsonStatusParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1D6F12B71F6A000D718C /* JsonStatusParser.h */; };
 		EF1D1D7212B71F6A000D718C /* JsonStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1D7012B71F6A000D718C /* JsonStatusParser.m */; };
-		EF1D1D7B12B73589000D718C /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1D1D7A12B73589000D718C /* libxml2.2.7.3.dylib */; };
 		EF1D1DE412B74ED7000D718C /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DD912B74ED7000D718C /* JSON.h */; };
 		EF1D1DE512B74ED7000D718C /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DDA12B74ED7000D718C /* NSObject+SBJSON.h */; };
 		EF1D1DE612B74ED7000D718C /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DDB12B74ED7000D718C /* NSObject+SBJSON.m */; };
@@ -65,16 +55,8 @@
 		EF1D1DEC12B74ED7000D718C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DE112B74ED7000D718C /* SBJsonParser.m */; };
 		EF1D1DED12B74ED7000D718C /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D1DE212B74ED7000D718C /* SBJsonWriter.h */; };
 		EF1D1DEE12B74ED7000D718C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D1DE312B74ED7000D718C /* SBJsonWriter.m */; };
-		EF1F758912A37418007C5CDF /* OAuth+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F758512A37418007C5CDF /* OAuth+Additions.h */; };
-		EF1F758A12A37418007C5CDF /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F758612A37418007C5CDF /* OAuth+Additions.m */; };
-		EF1F758B12A37418007C5CDF /* OAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F758712A37418007C5CDF /* OAuthCore.h */; };
-		EF1F758C12A37418007C5CDF /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F758812A37418007C5CDF /* OAuthCore.m */; };
-		EF1F759612A3743C007C5CDF /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F759412A3743C007C5CDF /* NSData+Base64.h */; };
-		EF1F759712A3743C007C5CDF /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F759512A3743C007C5CDF /* NSData+Base64.m */; };
 		EF1F75A312A374BE007C5CDF /* Weibo.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75A112A374BE007C5CDF /* Weibo.h */; };
 		EF1F75A412A374BE007C5CDF /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F75A212A374BE007C5CDF /* Weibo.m */; };
-		EF1F75AB12A3762F007C5CDF /* OAuthToken.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75A912A3762F007C5CDF /* OAuthToken.h */; };
-		EF1F75AC12A3762F007C5CDF /* OAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F75AA12A3762F007C5CDF /* OAuthToken.m */; };
 		EF1F75E612A37BDA007C5CDF /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F75E512A37BDA007C5CDF /* Constants.h */; };
 		EF1F768112A390F6007C5CDF /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1F767F12A390F6007C5CDF /* HttpClient.h */; };
 		EF1F768212A390F6007C5CDF /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F768012A390F6007C5CDF /* HttpClient.m */; };
@@ -91,13 +73,14 @@
 		EF1F773A12A3B7FF007C5CDF /* PutMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1F773812A3B7FF007C5CDF /* PutMethod.m */; };
 		EF2D691512C07CDC0047631C /* escape.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D691412C07CDC0047631C /* escape.h */; };
 		EF2D691712C07D060047631C /* escape.c in Sources */ = {isa = PBXBuildFile; fileRef = EF2D691612C07D060047631C /* escape.c */; };
+		EF3E97D113936935006DF85C /* StringPart.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3E97CF13936935006DF85C /* StringPart.h */; };
+		EF3E97D213936935006DF85C /* StringPart.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E97D013936935006DF85C /* StringPart.m */; };
 		EF5C161912CB1897001563EF /* FilePart.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5C161712CB1897001563EF /* FilePart.h */; };
 		EF5C161A12CB1897001563EF /* FilePart.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5C161812CB1897001563EF /* FilePart.m */; };
 		EF5C161F12CB1B02001563EF /* PartBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5C161E12CB1B02001563EF /* PartBase.h */; };
 		EF5C162712CB1C6C001563EF /* PartBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5C162612CB1C6C001563EF /* PartBase.m */; };
 		EF8BAB7512B623DB0083DFF2 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8BAB6E12B623760083DFF2 /* Base64.h */; };
 		EFBA4FCC12AF7AEE0054FC89 /* HttpClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */; };
-		EFBA501B12AF7F1A0054FC89 /* libweibo4objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libweibo4objc.a */; };
 		EFBA511112AF8A4A0054FC89 /* Status.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA510F12AF8A4A0054FC89 /* Status.h */; };
 		EFBA511212AF8A4A0054FC89 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511012AF8A4A0054FC89 /* Status.m */; };
 		EFBA511512AF8A5E0054FC89 /* DirectMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA511312AF8A5E0054FC89 /* DirectMessage.h */; };
@@ -108,10 +91,6 @@
 		EFBA511E12AF8A8B0054FC89 /* BaseStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA511C12AF8A8B0054FC89 /* BaseStatus.m */; };
 		EFBA519212AFA7AB0054FC89 /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBA519012AFA7AB0054FC89 /* User.h */; };
 		EFBA519312AFA7AB0054FC89 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA519112AFA7AB0054FC89 /* User.m */; };
-		EFBA523A12AFB9A10054FC89 /* libweibo4objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libweibo4objc.a */; };
-		EFBA523F12AFB9B70054FC89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		EFBA524212AFB9D90054FC89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBA524112AFB9D90054FC89 /* main.m */; };
-		EFC68EA712B9DA330040629E /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC68EA612B9DA330040629E /* test.xib */; };
 		EFC68EAF12B9DF910040629E /* InvalidParameterException.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC68EAD12B9DF910040629E /* InvalidParameterException.h */; };
 		EFC68EB012B9DF910040629E /* InvalidParameterException.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC68EAE12B9DF910040629E /* InvalidParameterException.m */; };
 		EFCA88D412BF49FE0055E513 /* ServerSideException.h in Headers */ = {isa = PBXBuildFile; fileRef = EFCA88D212BF49FE0055E513 /* ServerSideException.h */; };
@@ -122,6 +101,15 @@
 		EFD8C09E12CC73DB003A86D2 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C09C12CC73DB003A86D2 /* NSStringAdditions.m */; };
 		EFD8C0B412CC75BD003A86D2 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD8C0B212CC75BD003A86D2 /* NSDataAdditions.h */; };
 		EFD8C0B512CC75BD003A86D2 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8C0B312CC75BD003A86D2 /* NSDataAdditions.m */; };
+		EFFB1B611393724C0089FA34 /* NSString_URLEncodingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BA1384BA0D00689881 /* NSString_URLEncodingTest.m */; };
+		EFFB1B621393724C0089FA34 /* OAConsumerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BC1384BA0D00689881 /* OAConsumerTest.m */; };
+		EFFB1B631393724C0089FA34 /* OAHMAC_SHA1SignatureProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626BE1384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.m */; };
+		EFFB1B641393724C0089FA34 /* OAPlaintextSignatureProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C01384BA0D00689881 /* OAPlaintextSignatureProviderTest.m */; };
+		EFFB1B651393724C0089FA34 /* OARequestParameterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C21384BA0D00689881 /* OARequestParameterTest.m */; };
+		EFFB1B661393724C0089FA34 /* OATokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C41384BA0D00689881 /* OATokenTest.m */; };
+		EFFB1B671393724C0089FA34 /* OauthSingnatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C61384BA0D00689881 /* OauthSingnatureTest.m */; };
+		EFFB1B681393724C0089FA34 /* RandomStringGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626C81384BA0D00689881 /* RandomStringGeneratorTest.m */; };
+		EFFB1B691393724C0089FA34 /* XauthSignatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C63626CA1384BA0D00689881 /* XauthSignatureTest.m */; };
 		EFFE32EF12A498D900A80C69 /* HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = EFFE32ED12A498D900A80C69 /* HttpMethod.h */; };
 		EFFE32F012A498D900A80C69 /* HttpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFE32EE12A498D900A80C69 /* HttpMethod.m */; };
 /* End PBXBuildFile section */
@@ -166,7 +154,6 @@
 		C63626C81384BA0D00689881 /* RandomStringGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomStringGeneratorTest.m; sourceTree = "<group>"; };
 		C63626C91384BA0D00689881 /* XauthSignatureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XauthSignatureTest.h; sourceTree = "<group>"; };
 		C63626CA1384BA0D00689881 /* XauthSignatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XauthSignatureTest.m; sourceTree = "<group>"; };
-		D2AAC07E0554694100DB518D /* libweibo4objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libweibo4objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF18D4A712BEF4ED00382796 /* ServerSideError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSideError.h; sourceTree = "<group>"; };
 		EF18D4A812BEF4ED00382796 /* ServerSideError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSideError.m; sourceTree = "<group>"; };
 		EF1D1D6712B71F21000D718C /* XmlStatusParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlStatusParser.h; sourceTree = "<group>"; };
@@ -185,16 +172,8 @@
 		EF1D1DE112B74ED7000D718C /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		EF1D1DE212B74ED7000D718C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		EF1D1DE312B74ED7000D718C /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		EF1F758512A37418007C5CDF /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
-		EF1F758612A37418007C5CDF /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
-		EF1F758712A37418007C5CDF /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		EF1F758812A37418007C5CDF /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
-		EF1F759412A3743C007C5CDF /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "../NSData+Base64.h"; sourceTree = "<group>"; };
-		EF1F759512A3743C007C5CDF /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "../NSData+Base64.m"; sourceTree = "<group>"; };
 		EF1F75A112A374BE007C5CDF /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
 		EF1F75A212A374BE007C5CDF /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
-		EF1F75A912A3762F007C5CDF /* OAuthToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthToken.h; sourceTree = "<group>"; };
-		EF1F75AA12A3762F007C5CDF /* OAuthToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthToken.m; sourceTree = "<group>"; };
 		EF1F75E512A37BDA007C5CDF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		EF1F767F12A390F6007C5CDF /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
 		EF1F768012A390F6007C5CDF /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
@@ -213,6 +192,8 @@
 		EF2D691612C07D060047631C /* escape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = escape.c; sourceTree = "<group>"; };
 		EF36FC1D12ACB536004E8371 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		EF39795512A8BCDF00C6A580 /* unit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unit-Info.plist"; sourceTree = "<group>"; };
+		EF3E97CF13936935006DF85C /* StringPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringPart.h; sourceTree = "<group>"; };
+		EF3E97D013936935006DF85C /* StringPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringPart.m; sourceTree = "<group>"; };
 		EF5C161712CB1897001563EF /* FilePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePart.h; sourceTree = "<group>"; };
 		EF5C161812CB1897001563EF /* FilePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePart.m; sourceTree = "<group>"; };
 		EF5C161E12CB1B02001563EF /* PartBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartBase.h; sourceTree = "<group>"; };
@@ -220,7 +201,7 @@
 		EF6835E812ACDBDD00250D3A /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
 		EF8BAB6E12B623760083DFF2 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		EF8BAB6F12B623760083DFF2 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		EFBA4FBE12AF7A200054FC89 /* unit.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unit.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBA4FBE12AF7A200054FC89 /* unit.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = unit.octest; path = "/Users/fanngyuan/Documents/workspace/weibo4objc/weibo4objc/build/Release-iphoneos/unit.octest"; sourceTree = "<absolute>"; };
 		EFBA4FCA12AF7AEE0054FC89 /* HttpClientTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClientTest.h; sourceTree = "<group>"; };
 		EFBA4FCB12AF7AEE0054FC89 /* HttpClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClientTest.m; sourceTree = "<group>"; };
 		EFBA510F12AF8A4A0054FC89 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
@@ -233,7 +214,6 @@
 		EFBA511C12AF8A8B0054FC89 /* BaseStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStatus.m; sourceTree = "<group>"; };
 		EFBA519012AFA7AB0054FC89 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		EFBA519112AFA7AB0054FC89 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		EFBA523412AFB9920054FC89 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBA523612AFB9920054FC89 /* testApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testApp-Info.plist"; sourceTree = "<group>"; };
 		EFBA524012AFB9D90054FC89 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		EFBA524112AFB9D90054FC89 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,6 +228,7 @@
 		EFD8C09C12CC73DB003A86D2 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
 		EFD8C0B212CC75BD003A86D2 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
 		EFD8C0B312CC75BD003A86D2 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		EFFB1B8813937A5F0089FA34 /* libweibo4objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libweibo4objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFE32ED12A498D900A80C69 /* HttpMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMethod.h; sourceTree = "<group>"; };
 		EFFE32EE12A498D900A80C69 /* HttpMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,17 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFBA501B12AF7F1A0054FC89 /* libweibo4objc.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFBA523212AFB9920054FC89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFBA523A12AFB9A10054FC89 /* libweibo4objc.a in Frameworks */,
-				EFBA523F12AFB9B70054FC89 /* Foundation.framework in Frameworks */,
-				EF1D1D7B12B73589000D718C /* libxml2.2.7.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +255,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libweibo4objc.a */,
-				EFBA4FBE12AF7A200054FC89 /* unit.octest */,
-				EFBA523412AFB9920054FC89 /* testApp.app */,
+				EFFB1B8813937A5F0089FA34 /* libweibo4objc.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,7 +294,6 @@
 				EFBA4FC812AF7A600054FC89 /* test */,
 				C63626A41384BA0D00689881 /* oauthConsumer */,
 				EF1F75A012A3748A007C5CDF /* httpClient */,
-				EF1F758412A37418007C5CDF /* oauth */,
 				EF1F75A112A374BE007C5CDF /* Weibo.h */,
 				EF1F75A212A374BE007C5CDF /* Weibo.m */,
 				EF1F75E512A37BDA007C5CDF /* Constants.h */,
@@ -424,21 +391,6 @@
 			path = jsonFramework;
 			sourceTree = "<group>";
 		};
-		EF1F758412A37418007C5CDF /* oauth */ = {
-			isa = PBXGroup;
-			children = (
-				EF1F759412A3743C007C5CDF /* NSData+Base64.h */,
-				EF1F759512A3743C007C5CDF /* NSData+Base64.m */,
-				EF1F758512A37418007C5CDF /* OAuth+Additions.h */,
-				EF1F758612A37418007C5CDF /* OAuth+Additions.m */,
-				EF1F758712A37418007C5CDF /* OAuthCore.h */,
-				EF1F758812A37418007C5CDF /* OAuthCore.m */,
-				EF1F75A912A3762F007C5CDF /* OAuthToken.h */,
-				EF1F75AA12A3762F007C5CDF /* OAuthToken.m */,
-			);
-			path = oauth;
-			sourceTree = "<group>";
-		};
 		EF1F75A012A3748A007C5CDF /* httpClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +433,8 @@
 		EF5C161612CB1861001563EF /* parts */ = {
 			isa = PBXGroup;
 			children = (
+				EF3E97CF13936935006DF85C /* StringPart.h */,
+				EF3E97D013936935006DF85C /* StringPart.m */,
 				EF5C161712CB1897001563EF /* FilePart.h */,
 				EF5C161812CB1897001563EF /* FilePart.m */,
 				EF5C161E12CB1B02001563EF /* PartBase.h */,
@@ -548,11 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* weibo4objc_Prefix.pch in Headers */,
-				EF1F758912A37418007C5CDF /* OAuth+Additions.h in Headers */,
-				EF1F758B12A37418007C5CDF /* OAuthCore.h in Headers */,
-				EF1F759612A3743C007C5CDF /* NSData+Base64.h in Headers */,
 				EF1F75A312A374BE007C5CDF /* Weibo.h in Headers */,
-				EF1F75AB12A3762F007C5CDF /* OAuthToken.h in Headers */,
 				EF1F75E612A37BDA007C5CDF /* Constants.h in Headers */,
 				EF1F768112A390F6007C5CDF /* HttpClient.h in Headers */,
 				EF1F76B012A39700007C5CDF /* HttpMethodDelegate.h in Headers */,
@@ -604,6 +554,7 @@
 				C63626EA1384BA0D00689881 /* OauthSingnatureTest.h in Headers */,
 				C63626EC1384BA0D00689881 /* RandomStringGeneratorTest.h in Headers */,
 				C63626EE1384BA0D00689881 /* XauthSignatureTest.h in Headers */,
+				EF3E97D113936935006DF85C /* StringPart.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +576,7 @@
 			);
 			name = weibo4objc;
 			productName = weibo4objc;
-			productReference = D2AAC07E0554694100DB518D /* libweibo4objc.a */;
+			productReference = EFFB1B8813937A5F0089FA34 /* libweibo4objc.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EFBA4FBD12AF7A200054FC89 /* unit */ = {
@@ -645,23 +596,6 @@
 			productName = unit;
 			productReference = EFBA4FBE12AF7A200054FC89 /* unit.octest */;
 			productType = "com.apple.product-type.bundle";
-		};
-		EFBA523312AFB9920054FC89 /* testApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EFBA523912AFB9930054FC89 /* Build configuration list for PBXNativeTarget "testApp" */;
-			buildPhases = (
-				EFBA523012AFB9920054FC89 /* Resources */,
-				EFBA523112AFB9920054FC89 /* Sources */,
-				EFBA523212AFB9920054FC89 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = testApp;
-			productName = testApp;
-			productReference = EFBA523412AFB9920054FC89 /* testApp.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -685,7 +619,6 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* weibo4objc */,
 				EFBA4FBD12AF7A200054FC89 /* unit */,
-				EFBA523312AFB9920054FC89 /* testApp */,
 			);
 		};
 /* End PBXProject section */
@@ -695,14 +628,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFBA523012AFB9920054FC89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFC68EA712B9DA330040629E /* test.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,11 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1F758A12A37418007C5CDF /* OAuth+Additions.m in Sources */,
-				EF1F758C12A37418007C5CDF /* OAuthCore.m in Sources */,
-				EF1F759712A3743C007C5CDF /* NSData+Base64.m in Sources */,
 				EF1F75A412A374BE007C5CDF /* Weibo.m in Sources */,
-				EF1F75AC12A3762F007C5CDF /* OAuthToken.m in Sources */,
 				EF1F768212A390F6007C5CDF /* HttpClient.m in Sources */,
 				EF1F76B612A397DC007C5CDF /* HttpResponse.m in Sources */,
 				EF1F76C912A39949007C5CDF /* BaseMethod.m in Sources */,
@@ -786,15 +707,7 @@
 				C63626D91384BA0D00689881 /* OAToken.m in Sources */,
 				C63626DB1384BA0D00689881 /* OauthSingnature.m in Sources */,
 				C63626DD1384BA0D00689881 /* RandomStringGenerator.m in Sources */,
-				C63626DF1384BA0D00689881 /* NSString_URLEncodingTest.m in Sources */,
-				C63626E11384BA0D00689881 /* OAConsumerTest.m in Sources */,
-				C63626E31384BA0D00689881 /* OAHMAC_SHA1SignatureProviderTest.m in Sources */,
-				C63626E51384BA0D00689881 /* OAPlaintextSignatureProviderTest.m in Sources */,
-				C63626E71384BA0D00689881 /* OARequestParameterTest.m in Sources */,
-				C63626E91384BA0D00689881 /* OATokenTest.m in Sources */,
-				C63626EB1384BA0D00689881 /* OauthSingnatureTest.m in Sources */,
-				C63626ED1384BA0D00689881 /* RandomStringGeneratorTest.m in Sources */,
-				C63626EF1384BA0D00689881 /* XauthSignatureTest.m in Sources */,
+				EF3E97D213936935006DF85C /* StringPart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,15 +715,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFFB1B611393724C0089FA34 /* NSString_URLEncodingTest.m in Sources */,
+				EFFB1B621393724C0089FA34 /* OAConsumerTest.m in Sources */,
+				EFFB1B631393724C0089FA34 /* OAHMAC_SHA1SignatureProviderTest.m in Sources */,
+				EFFB1B641393724C0089FA34 /* OAPlaintextSignatureProviderTest.m in Sources */,
+				EFFB1B651393724C0089FA34 /* OARequestParameterTest.m in Sources */,
+				EFFB1B661393724C0089FA34 /* OATokenTest.m in Sources */,
+				EFFB1B671393724C0089FA34 /* OauthSingnatureTest.m in Sources */,
+				EFFB1B681393724C0089FA34 /* RandomStringGeneratorTest.m in Sources */,
+				EFFB1B691393724C0089FA34 /* XauthSignatureTest.m in Sources */,
 				EFBA4FCC12AF7AEE0054FC89 /* HttpClientTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFBA523112AFB9920054FC89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFBA524212AFB9D90054FC89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,7 +748,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = weibo4objc;
-				SDKROOT = iphonesimulator4.0;
+				SDKROOT = iphoneos;
+				"SDKROOT[arch=*]" = iphoneos;
 			};
 			name = Debug;
 		};
@@ -849,6 +764,7 @@
 				GCC_PREFIX_HEADER = weibo4objc_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = weibo4objc;
+				SDKROOT = iphoneos4.3;
 			};
 			name = Release;
 		};
@@ -937,57 +853,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = unit;
+				SDKROOT = iphoneos4.3;
 				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-		EFBA523712AFB9930054FC89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "testApp-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = testApp;
-				SDKROOT = iphoneos4.0;
-			};
-			name = Debug;
-		};
-		EFBA523812AFB9930054FC89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "testApp-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = testApp;
-				SDKROOT = iphoneos4.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1018,15 +885,6 @@
 			buildConfigurations = (
 				EFBA4FC112AF7A210054FC89 /* Debug */,
 				EFBA4FC212AF7A210054FC89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EFBA523912AFB9930054FC89 /* Build configuration list for PBXNativeTarget "testApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EFBA523712AFB9930054FC89 /* Debug */,
-				EFBA523812AFB9930054FC89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
